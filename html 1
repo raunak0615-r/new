@@ -1,0 +1,23 @@
+<!-- Add this inside <main> or wherever you'd like the form to appear -->
+<section class="signup-section">
+  <h2>Sign Up for Updates</h2>
+  <form id="signupForm">
+    <input type="text" id="username" name="username" placeholder="Your Name" required>
+    <input type="email" id="useremail" name="useremail" placeholder="Your Email" required>
+    <button type="submit">Submit</button>
+  </form>
+  <div id="signupStatus"></div>
+</section>
+<nav>
+  <a href="index.html">Home</a>
+  <a href="about.html">About Us</a>
+  <div class="dropdown">
+    <button class="dropbtn">Products</button>
+    <div class="dropdown-content">
+      <a href="spare.html">Spare Parts</a>
+      <a href="equipment.html">Equipment</a>
+    </div>
+  </div>
+  <a href="services.html">Services</a>
+  <a href="contact.html">Contact</a>
+</nav>
