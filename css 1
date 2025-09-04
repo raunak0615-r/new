@@ -1,0 +1,68 @@
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  background: #f8f8f8;
+}
+header {
+  background: #202a44;
+  color: white;
+  display: flex;
+  align-items: center;
+  padding: 10px 30px;
+  justify-content: space-between;
+}
+.logo img {
+  height: 50px;
+}
+nav a {
+  color: white;
+  margin: 0 15px;
+  text-decoration: none;
+  font-weight: 500;
+  padding: 8px 16px;
+  border-radius: 4px;
+}
+nav a.active, nav a:hover {
+  background: #fbc02d;
+  color: #202a44;
+}
+.banner {
+  background: url('images/banner.jpg') center/cover;
+  color: white;
+  padding: 60px 0;
+  text-align: center;
+  font-size: 2.5rem;
+  font-weight: bold;
+  letter-spacing: 2px;
+}
+main {
+  max-width: 900px;
+  margin: 40px auto;
+  background: white;
+  padding: 40px;
+  border-radius: 10px;
+  box-shadow: 0 6px 20px rgba(0,0,0,0.07);
+}
+.about h2 {
+  color: #202a44;
+  margin-bottom: 16px;
+}
+.mission-vision h3 {
+  color: #fbc02d;
+  margin-top: 24px;
+}
+footer {
+  background: #202a44;
+  color: white;
+  text-align: center;
+  padding: 30px 10px;
+  margin-top: 40px;
+  font-size: 1rem;
+}
+.footer-info address {
+  font-style: normal;
+  color: #fbc02d;
+}
+.social {
+  margin-top: 10px;
+}
