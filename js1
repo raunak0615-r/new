@@ -1,0 +1,22 @@
+const express = require('express');
+const fs = require('fs');
+const path = require('path');
+const app = express();
+
+app.use(express.json());
+app.use(express.static(__dirname)); // serve static files
+
+app.post('/api/save-user', (req, res) => {
+  const { name, email } = req.body;
+  if (!name || !email) return res.status(400).send('Missing fields');
+  const dir = path.join(__dirname, 'name');
+  if (!fs.existsSync(dir)) fs.mkdirSync(dir);
+  // Save as a simple text file, filename = name.txt
+  const filePath = path.join(dir, `${name.replace(/[^a-z0-9]/gi, '_')}.txt`);
+  fs.writeFile(filePath, `Name: ${name}\nEmail: ${email}\n`, err => {
+    if (err) return res.status(500).send('Error saving');
+    res.send('Saved');
+  });
+});
+
+app.listen(3000, () => console.log('Server running on http://localhost:3000'));
